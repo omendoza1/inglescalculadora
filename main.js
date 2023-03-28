@@ -45,3 +45,4 @@ function addTeacherGrade() {
     // Mostrar la nota final en un cuadro de diálogo
     window.alert("La nota final es: " + finalGrade.toFixed(2));
   }
+  

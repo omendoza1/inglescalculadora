@@ -41,7 +41,7 @@
 			<legend>Calificaciones del profesor:</legend>
 			<label for="teacher-grades">Calificaciones del profesor:</label>
 			<div id="teacher-grades">
-				<input type="number" name="teacher-grade" min="0" max="100" required>
+				<input type="number" name="teacher-grade" min="0" max="5" required>
 
 			</div>
 			<button type="button" onclick="addTeacherGrade()">Agregar otra calificación del profesor</button>
@@ -56,6 +56,7 @@
 		</fieldset>
 
 		<button type="button" onclick="calculateFinalGrade()">Calcular nota final del corte</button>
+		<button type="reset">Limpiar</button>
 	</form>
 
 	<script src="main.js"></script>

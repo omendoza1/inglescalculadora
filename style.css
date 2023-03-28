@@ -93,4 +93,11 @@ form > button {
 
 form > button:hover {
   background-color: #e00000;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
