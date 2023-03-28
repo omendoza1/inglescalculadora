@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>Calculadora de notas</title>
-  <link rel="stylesheet" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>multidiomas 2023</title>
 </head>
+
 <body>
 	<h1>Calculadora de nota de inglés por corte</h1>
-	
+
 	<form>
 		<fieldset>
 			<legend>Calificaciones de assignments:</legend>
@@ -20,7 +24,7 @@
 			<label for="assignments4">Assignment 4:</label>
 			<input type="number" id="assignments4" name="assignments4" min="0" max="100" required><br>
 		</fieldset>
-		
+
 		<fieldset>
 			<legend>Calificaciones de unit tests:</legend>
 			<label for="tests1">Test 1:</label>
@@ -32,17 +36,17 @@
 			<label for="tests4">Test 4:</label>
 			<input type="number" id="tests4" name="tests4" min="0" max="100" required><br>
 		</fieldset>
-		
+
 		<fieldset>
 			<legend>Calificaciones del profesor:</legend>
 			<label for="teacher-grades">Calificaciones del profesor:</label>
 			<div id="teacher-grades">
 				<input type="number" name="teacher-grade" min="0" max="100" required>
-			
+
 			</div>
 			<button type="button" onclick="addTeacherGrade()">Agregar otra calificación del profesor</button>
 		</fieldset>
-		
+
 		<fieldset>
 			<legend>Calificaciones de progress test</legend>
 			<label for="speaking">Speaking:</label>
@@ -50,10 +54,11 @@
 			<label for="cut1">CUT1:</label>
 			<input type="number" id="cut1" name="cut1" min="0" max="100" required><br>
 		</fieldset>
-		
+
 		<button type="button" onclick="calculateFinalGrade()">Calcular nota final del corte</button>
 	</form>
-	
+
 	<script src="main.js"></script>
 </body>
+
 </html>
