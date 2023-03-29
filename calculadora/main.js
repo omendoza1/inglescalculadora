@@ -1,3 +1,4 @@
+document.getElementById("btn-calcular").disabled = true;
 // Función para agregar una calificación del profesor
 function addTeacherGrade() {
     const teacherGrades = document.getElementById("teacher-grades");
@@ -44,5 +45,101 @@ function addTeacherGrade() {
   
     // Mostrar la nota final en un cuadro de diálogo
     window.alert("La nota final es: " + finalGrade.toFixed(2));
+
   }
+  function limpiarFormulario() {
+
+    const campos = document.querySelectorAll("#formulario .form-control");
+    for (let i = 0; i < campos.length; i++) {
+      campos[i].value = "";
+      campos[i].disabled = false;
+    }
+    document.getElementById("btn-limpiar").disabled = true;
+    document.getElementById("btn-calcular").disabled = true;
+  }
+  function validarFormulario() {
+    const campos = document.querySelectorAll("#formulario .form-control");
+    let formularioValido = true;
+    for (let i = 0; i < campos.length; i++) {
+      if (campos[i].value === "") {
+        formularioValido = false;
+        break;
+      }
+    }
+    
+    document.getElementById("btn-calcular").disabled = !formularioValido;
+  }
+  window.addEventListener("load", () => {
+   
+  
+    // Validar el formulario al cambiar el valor de algún campo
+    const formulario = document.getElementById("formulario");
+    formulario.addEventListener("input", validarFormulario);
+  
+    // Calcular el sueldo al hacer clic en el botón calcular
+    const btnCalcular = document.getElementById("btn-calcular");
+    btnCalcular.addEventListener("click", () => {
+      calculateFinalGrade();
+      btnCalcular.disabled = true;
+      document.getElementById("btn-limpiar").disabled = false;
+      formulario.querySelectorAll(".form-control").forEach(campo => {
+        campo.disabled = true;
+      });
+    });
+ 
+    // Limpiar el formulario al hacer clic en el botón limpiar
+    const btnLimpiar = document.getElementById("btn-limpiar");
+    btnLimpiar.addEventListener("click", limpiarFormulario);
+  });
+ /*
+  const inputs = document.querySelectorAll(".form-control");
+inputs.forEach(input => {
+  let noBorrar = false;
+  let haDigitado = false;
+
+  input.addEventListener("focus", function() {
+    if (this.value === "0") {
+      noBorrar = true;
+      }
+      });
+      
+      input.addEventListener("keydown", function(event) {
+      
+      
+      if (event.key === "Backspace" && noBorrar) {
+        event.preventDefault();
+        if (!haDigitado) {
+          
+          this.classList.add("temblor");
+        }
+      }
+      
+      if (this.value > "0") {
+      noBorrar = false;
+      haDigitado = true;
+      }
+      });
+      
+      
+      
+      input.addEventListener("input", function() {
+        const maxlength = this.getAttribute("data-maxlength");
+        if (this.value.length > maxlength) {
+          this.value = this.value.slice(0, maxlength);
+        }
+        if (this.value.length === maxlength) {
+          const nextInput = this.nextElementSibling;
+          if (nextInput) {
+            nextInput.focus();
+          }
+        }
+      });
+      
+     
+      });
+*/
+
+
+
+
   
