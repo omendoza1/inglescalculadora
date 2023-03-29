@@ -1,0 +1,162 @@
+/* Estilos de los fieldsets */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+/* Diseño responsivo */
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Diseño visual */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 40px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background-color: #0074D9;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+button:hover {
+  background-color: #0d98e8;
+}
+
+/* Organización de la información */
+form {
+  display: grid;
+  grid-gap: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#teacher-grades {
+  display: flex;
+  align-items: center;
+}
+
+#teacher-grades input {
+  margin-right: 10px;
+}
+
+/* Ubicación y tamaño de los botones */
+button {
+  width: 100%;
+}
+
+/* Etiquetado y estilo de los botones */
+button[type="reset"] {
+  background-color: #e74c3c;
+}
+
+/* Retroalimentación */
+input[type="number"]:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0074D9;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  
+  display: inline-block;
+  border: none;
+  background-color: #0074D9;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all .3s;
+}
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0074D9;
+}
+a:hover {
+  background-color: #0d98e8;
+}
+
+.footer {
+  background-color: rgb(20, 20, 20);
+  color: #fff;
+  padding: 40px 0;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.footer .copyright {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .copyright .developer {
+  margin-right: 10px;
+  font-style: italic;
+  color: #e23d3d;
+}
