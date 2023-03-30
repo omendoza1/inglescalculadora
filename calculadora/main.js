@@ -6,7 +6,7 @@ function addTeacherGrade() {
     newInput.type = "number";
     newInput.name = "teacher-grade";
     newInput.min = 0;
-    newInput.max = 100;
+    newInput.max = 5;
     newInput.required = true;
     teacherGrades.appendChild(newInput);
   }

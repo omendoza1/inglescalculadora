@@ -19,6 +19,10 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 0;
+  border: 1px solid black;
+  position: relative;
+
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,23 +67,35 @@ label {
   margin-bottom: 10px;
 }
 
-
-
-
-
-
-
 /* Estilos de lista */
 ul, ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* elimina las viñetas/bullets de la lista */
+  margin: 0; /* elimina el margen exterior de la lista */
+  padding: 0; /* elimina el relleno interior de la lista */
+  font-size: 16px; /* establece el tamaño de fuente de la lista */
+  font-family: Helvetica, Arial, sans-serif; /* establece la fuente de la lista */
+  color: #333; /* establece el color del texto de la lista */
+  line-height: 1.2; /* establece la altura de línea de la lista */
+  word-spacing: 4px; /* establece el espaciado entre palabras del texto de la lista */
+  
 }
 
 li {
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; /* establece un margen inferior de 10 píxeles entre cada elemento de la lista */
+  background-color: #eee; /* establece el color de fondo de cada elemento de la lista */
+  padding: 15px; /* establece un relleno interior de 15 píxeles para cada elemento de la lista */
+  border-left: 4px solid #ccc; /* establece un borde izquierdo de 4 píxeles sólido y color gris para cada elemento de la lista */
+  text-align: justify; /* establece que el texto se justifique dentro del elemento de la lista */
+  text-indent: 20px; /* establece una sangría inicial de 20 píxeles para cada elemento de la lista */
+  transition: all 0.3s ease; /* establece una transición de 0.3 segundos con efecto de aceleración para todas las propiedades que cambien en el elemento de la lista */
+  transform: translateX(0); /* establece una transformación de desplazamiento horizontal inicial de cero */
 
+}
+li:hover {
+  background-color: #ddd; /* cambia el color de fondo del elemento de la lista al pasar el mouse sobre él */
+  border-left-color: #555; /* cambia el color del borde izquierdo del elemento de la lista al pasar el mouse sobre él */
+  transform: translateX(10px); /* desplaza horizontalmente el elemento de la lista 10 píxeles a la derecha al pasar el mouse sobre él */
+}
 .container {
     display: flex;
     justify-content: center;
@@ -104,5 +120,14 @@ li {
   }
   
   .button:hover {
-    background-color: #3e8e41;
+    background-color: #3e8e41; /* cambia el color de fondo a verde oscuro cuando se pasa el cursor sobre el botón */
+    color: #fff; /* cambia el color del texto a blanco cuando se pasa el cursor sobre el botón */
+    border-color: #3e8e41; /* cambia el color del borde a verde oscuro cuando se pasa el cursor sobre el botón */
+    border-radius: 5px; /* agrega un radio de borde de 5 píxeles al botón cuando se pasa el cursor sobre él */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* agrega una sombra al botón cuando se pasa el cursor sobre él */
+    text-shadow: none; /* elimina la sombra de texto del botón cuando se pasa el cursor sobre él */
+    transform: translateY(-2px); /* mueve el botón hacia arriba 2 píxeles cuando se pasa el cursor sobre él */
+    transition: all 0.3s ease; /* establece una transición suave de 0.3 segundos para todas las propiedades que cambien cuando se pasa el cursor sobre el botón */
+    outline: none; /* elimina el contorno predeterminado del botón cuando se enfoca */
+    cursor: pointer; /* establece el cursor como puntero cuando se pasa el cursor sobre el botón */
   }

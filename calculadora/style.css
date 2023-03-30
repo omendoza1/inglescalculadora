@@ -34,11 +34,17 @@ h1 {
 }
 
 form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  max-width: 600px; /* establece el ancho máximo del formulario en 600 píxeles */
+  margin: 0 auto; /* centra el formulario horizontalmente en la página */
+  padding: 20px; /* establece un relleno interior de 20 píxeles para el formulario */
+  background-color: #fff; /* establece el color de fondo del formulario en blanco */
+  box-shadow: 0 2px 4px rgba(0,0,0,.1); /* agrega una sombra al formulario para darle un aspecto tridimensional */
+  border-radius: 5px; /* agrega un radio de borde de 5 píxeles para el formulario */
+  font-size: 18px; /* establece el tamaño de fuente en 18 píxeles para el texto dentro del formulario */
+  line-height: 1.5; /* establece el espaciado entre líneas en 1.5 para el texto dentro del formulario */
+
+  display: flex; /* establece la visualización del formulario como un contenedor flexible */
+  transition: all 0.3s ease; /* establece una transición de 0.3 segundos con efecto de aceleración para todas las propiedades que cambien en el formulario */
 }
 
 button {
